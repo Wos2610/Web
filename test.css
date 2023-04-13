@@ -1,0 +1,134 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation{
+    justify-content: space-between;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    margin-left: 40px;
+}
+
+.navigation a{
+    position: relative;
+    margin-right: 40px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    background: aliceblue;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: -5px;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform.5s;
+}
+
+.navigation a:hover::after{
+    transform: scale(1);
+}
+
+.wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 45px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: ease 0.5s;
+}
+
+.wrapper.active {
+    height: 400px;
+}
+
+/* active la sign-up */
+.wrapper .form-box-sign-up {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box-sign-up {
+    transition: ease transform 0.18s;
+    transform: translateX(0);
+}
+
+.wrapper .form-box-log-in {
+    transition: ease transform 0.18s;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box-log-in {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.input-box {
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    border-bottom: 2px solid rgba(255,255,255, 0.702);
+}
+
+input::placeholder{
+    color: rgba(255,255,255, 0.502);
+    position: relative;
+    ;
+}
+
+.input-box input{
+    border: none;
+    background: transparent;
+    width: 200px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.agree-term {
+    font-size: 10px;
+    text-align: center;
+    margin: 15px 10px 0px 10px;
+}
+
+.button {
+    width: 200px;
+    height : 30px;
+    position: relative;
+    margin: 10px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 6px;
+}
