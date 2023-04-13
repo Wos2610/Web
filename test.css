@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('1.jpg') no-repeat;
+    background: url('bg1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -53,7 +53,7 @@ body {
 .wrapper {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 280px;
     background: transparent;
     border: 1px solid white;
     border-radius: 45px;
@@ -63,10 +63,11 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     transition: ease 0.5s;
+    overflow: hidden;
 }
 
 .wrapper.active {
-    height: 400px;
+    height: 350px;
 }
 
 /* active la sign-up */
@@ -96,6 +97,9 @@ body {
     text-transform: uppercase;
 }
 
+form {
+    margin-top: 40px;
+}
 .input-box {
     position: relative;
     margin: 10px;
@@ -127,7 +131,7 @@ input::placeholder{
     width: 200px;
     height : 30px;
     position: relative;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
     background-color: black;
     color: aliceblue;
     border-radius: 6px;
